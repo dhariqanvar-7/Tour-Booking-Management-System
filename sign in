@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- intha meta tamil english rendu language aiyum puringikum nu poturunthathu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RDNS Tours</title>
+    <link rel="icon" href=" " />
+    <!--ithula icon add pannirula rahesh-->
+    <script> 
+      function saveCredentials(event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        localStorage.setItem("savedUsername", username);
+        localStorage.setItem("savedPassword", password);
+        alert("✅ Sign-up Successful! Now you can login.");
+        window.location.href = "login page.html";
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://i.pinimg.com/736x/2e/3d/68/2e3d6845011de0d24c13dd1e1028a2ff.jpg");
+        background-size: cover;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .signin-container {
+        width: fit-content;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        mix-blend-mode: color-burn;
+      }
+      .signin-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .signin-container input[type="text"],
+      .signin-container
+        input[type="password"]
+        .signin-container
+        input[type="Name"] {
+        mix-blend-mode: normal !important;
+        width: 275px;
+        margin: 10px 0;
+        border-radius: 4px; /* less rounded */
+        padding: 8px;
+        border: 1px solid #ccc;
+        align-items: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .signin-container input[type="submit"] {
+        mix-blend-mode: normal !important;
+        width: 275px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signin-container">
+      <h1 style="text-align: center">Sign in</h1>
+      <hr />
+      <form onsubmit="saveCredentials(event)">
+        <h3>Name</h3>
+        <input type="text" placeholder="Name" required />
+        <h3>Username</h3>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+          required
+        />
+        <h3>Password</h3>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          required
+          style="height: 30px"
+          style="border-radius: 30px"
+        />
+        <br /><br />
+        <center>
+          <input type="submit" value="Signin" width="20px" height="5px" />
+        </center>
+      </form>
+    </div>
+  </body>
+</html>
