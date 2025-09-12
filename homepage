@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RDNS Tours</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f0f8ff;
+      }
+      header {
+        background-color: #007bff;
+        background-position: center;
+        background-size: cover;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+      }
+      nav {
+        background: #40454b;
+        padding: 10px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background 0.3s;
+        font-weight: bold;
+        position: relative;
+      }
+      nav a:hover {
+        background-color: #0c5b97; 
+      }
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(63, 42, 194, 0.1);
+        width: 200px;
+        z-index: 999;
+      }
+      nav a:hover .submenu,
+      nav a.active .submenu {
+        display: block;
+      }
+      .section {
+        height: 100vh;
+        padding: 60px 20px;
+        text-align: center;
+      }
+      footer {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      .slider {
+        overflow: hidden;
+        width: 100%;
+        max-width: 700px;
+        margin: 20px auto;
+      }
+      .slides {
+        display: flex;
+        transition: transform 10s ease-in-out;
+      }
+      .slides img {
+        width: 25%;
+        max-width: 700px;
+        height: auto;
+        margin: 0 5px;
+        border-radius: 10px;
+      }
+      .slides img::after {
+        content: attr(data-name);
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+      }
+      @keyframes slideAnimation {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-100%);
+        }
+        40% {
+          transform: translateX(-200%);
+        }
+        60% {
+          transform: translateX(-300%);
+        }
+        80% {
+          transform: translateX(-400%);
+        }
+        100% {
+          transform: translateX(-500%);
+        }
+      }
+      .slides {
+        animation: slideAnimation 500s infinite;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        font-size: large;
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+        text-decoration-color: #fff;
+      }
+
+      li {
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="home">
+      <h1>RDNS Tours</h1>
+      <p>Your Journey, Our Passion</p>
+    </header>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="destination.html">Destinations </a>
+      <a href="package.html">Packages </a>
+      <a href="#" onclick="showSection('contact')">Contact </a>
+    </nav>
+    <center>
+      <h1 id="welcomeMessage">Welcome Nanba👋😉!</h1>
+    </center>
+    <div class="section" id="destinations" style="background-color: #e0f7fa">
+      <h2>Top Destinations</h2>
+      <p>Explore our hand-picked places!</p>
+      <div class="slider">
+        <div class="slides">
+          <img
+            src="https://i.pinimg.com/236x/99/d4/33/99d433726b15aee004c6ff19a01098db.jpg"
+            alt="Beach"
+          />
+          <img
+            src="https://i.pinimg.com/736x/dd/9a/d6/dd9ad67a52b8965b6a57c8567176e9b8.jpg"
+            alt="Mountain"
+          />
+          <img
+            src="https://i.pinimg.com/236x/b8/68/5a/b8685a93b8a61da125f84afc104ce072.jpg"
+            alt="Forest"
+          />
+          <img
+            src="https://i.pinimg.com/236x/b6/02/e3/b602e3f22e0efec5b461ca2cdf75767c.jpg"
+            alt="Desert"
+          />
+          <img
+            src="https://i.pinimg.com/474x/c7/c4/5f/c7c45fde6f2161d1a6b5e1d8ead394fe.jpg"
+            alt="City"
+          />
+          <img
+            src="https://i.pinimg.com/236x/43/d8/e2/43d8e2452b719baddc40fce081c368f4.jpg"
+            alt="Village"
+          />
+          <img
+            src="https://i.pinimg.com/236x/e7/04/56/e7045643b35fba6754bf68e0dcae3bb0.jpg"
+            alt="Island"
+          />
+          <img
+          src="https://i.pinimg.com/236x/99/d4/33/99d433726b15aee004c6ff19a01098db.jpg"
+          alt="Beach"
+        />
+        <img
+          src="https://i.pinimg.com/736x/dd/9a/d6/dd9ad67a52b8965b6a57c8567176e9b8.jpg"
+          alt="Mountain"
+        />
+        <img
+          src="https://i.pinimg.com/236x/b8/68/5a/b8685a93b8a61da125f84afc104ce072.jpg"
+          alt="Forest"
+        />
+        <img
+          src="https://i.pinimg.com/236x/b6/02/e3/b602e3f22e0efec5b461ca2cdf75767c.jpg"
+          alt="Desert"
+        />
+        <img
+          src="https://i.pinimg.com/474x/c7/c4/5f/c7c45fde6f2161d1a6b5e1d8ead394fe.jpg"
+          alt="City"
+        />
+        <img
+          src="https://i.pinimg.com/236x/43/d8/e2/43d8e2452b719baddc40fce081c368f4.jpg"
+          alt="Village"
+        />
+        <img
+          src="https://i.pinimg.com/236x/e7/04/56/e7045643b35fba6754bf68e0dcae3bb0.jpg"
+          alt="Island"
+        />
+        </div>
+      </div>
+      <section id="Destinations">
+        <ul>
+          <a href="destination.html" style="color: #000;">Goa</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Manali</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Dubai</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Swizerland</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Thailand</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Malaysia</a
+          ><br /><br />
+          <a href="destination.html" style="color: #000;">Singapore</a>
+        </ul>
+      </section>
+    </div>
+
+    <div class="section" id="packages" style="background-color: #e8f5e9">
+      <h2>Our Packages</h2>
+      <p>Affordable and luxury tours await.</p>
+      <div class="slider">
+        <div class="slides">
+          <img
+            src="https://i.pinimg.com/736x/27/dd/3b/27dd3bbc3421e33cc7c31709ad64cc46.jpg"
+            alt="Bachelor's Trip"
+            data-name="Bachelor's Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/60/91/66/6091662ef1a80e976c942e7f708d0049.jpg"
+            alt="Marriage tour"
+            data-name="Marriage tour"
+          />
+          <img
+            src="https://i.pinimg.com/236x/2d/f2/a0/2df2a01964d9e5d7e2b2960c53f7e704.jpg"
+            alt="Honeymoon Trip"
+            data-name="Honeymoon Trip"
+          />
+          <img
+            src="https://i.pinimg.com/474x/92/db/4c/92db4cbd43ab200d2c61710825119656.jpg"
+            alt="Student's Trip"
+            data-name="Student's Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/58/4a/f2/584af26d9337a9bded4fdfa1127b60b9.jpg"
+            alt="Family Trip"
+            data-name="Family Trip"
+          />
+          <img
+            src="https://i.pinimg.com/474x/1e/72/47/1e72473df30297e7bf513b346168db2e.jpg"
+            alt="International Trip"
+            data-name="International Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/3b/92/99/3b92991d826ef41bff2a3cf2aaa5bc0c.jpg"
+            alt="Country Tour "
+            data-name="Country Tour"
+          />
+          <img
+            src="https://i.pinimg.com/736x/27/dd/3b/27dd3bbc3421e33cc7c31709ad64cc46.jpg"
+            alt="Bachelor's Trip"
+            data-name="Bachelor's Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/60/91/66/6091662ef1a80e976c942e7f708d0049.jpg"
+            alt="Marriage tour"
+            data-name="Marriage tour"
+          />
+          <img
+            src="https://i.pinimg.com/236x/2d/f2/a0/2df2a01964d9e5d7e2b2960c53f7e704.jpg"
+            alt="Honeymoon Trip"
+            data-name="Honeymoon Trip"
+          />
+          <img
+            src="https://i.pinimg.com/474x/92/db/4c/92db4cbd43ab200d2c61710825119656.jpg"
+            alt="Student's Trip"
+            data-name="Student's Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/58/4a/f2/584af26d9337a9bded4fdfa1127b60b9.jpg"
+            alt="Family Trip"
+            data-name="Family Trip"
+          />
+          <img
+            src="https://i.pinimg.com/474x/1e/72/47/1e72473df30297e7bf513b346168db2e.jpg"
+            alt="International Trip"
+            data-name="International Trip"
+          />
+          <img
+            src="https://i.pinimg.com/236x/3b/92/99/3b92991d826ef41bff2a3cf2aaa5bc0c.jpg"
+            alt="Country Tour "
+            data-name="Country Tour"
+          />
+        </div>
+      </div>
+      <section id="Packages">
+        <ul>
+          <a href="package.html" style="color: #000;">Bachelor's Trip </a
+          ><br /><br />
+          <a href="package.html" style="color: #000;">Marriage tour</a
+          ><br /><br />
+          <a href="package.html" style="color: #000;">Honeymoon Trip</a
+          ><br /><br />
+          <a href="package.html" style="color: #000;">Student's Trip</a
+          ><br /><br />
+          <a href="package.html" style="color: #000;">Family Trip</a
+          ><br /><br />
+          <a href="package.html" style="color: #000;">International Trip</a
+          ><br /><br />
+        </ul><br><br><br><br>
+      </section>
+    </div>
+    <div class="section" id="contact" style="background-color: #fff3e0">
+      <h2>Contact Us</h2>
+      <p>
+        Samuel R<br />
+        <a href="mailto:24104092@nec.edu.in">24104092@nec.edu.in</a> (+91 76038
+        37694)<br /><br />Dhariq J Anvar <br />
+        <a href="mailto:24104094@nec.edu.in">24104094@nec.edu.in</a>(+91 97101
+        27752)<br /><br />Rahesh L<br />
+        <a href="mailto:24104115@nec.edu.in">24104115@nec.edu.in</a> (+91 76958
+        69150)<br /><br />Nickson D kumar<br />
+        <a href="mailto:24104119@nec.edu.in">24104119@nec.edu.in</a>(+91 93452
+        88967)
+      </p>
+      <p>Reach out 24/7 for support.</p>
+    </div>
+
+    <footer>&copy; 2025 RDNS Tours. All rights reserved.</footer>
+
+    <script>
+      function showSection(sectionId) {
+        const allSections = document.querySelectorAll(".section");
+        allSections.forEach((sec) => (sec.style.display = "none"));
+
+        const target = document.getElementById(sectionId);
+        if (target) {
+          target.style.display = "block";
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+      const username = getQueryParam("user");
+      if (username) {
+        document.getElementById("welcomeMessage").textContent =
+          "Welcome, " + decodeURIComponent(username) + "👋😉!";
+      }
+    </script>
+  </body>
+</html>
