@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    header {
+       background-color: #007BFF;
+        background-position: center;
+        background-size: cover;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+      }
+      nav {
+      background: #40454b;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a:hover {
+        background-color: #0c5b97;
+      }
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      z-index: 999;
+    }
+    nav a:hover .submenu,
+    nav a.active .submenu {
+      display: block;
+    }
+    .section {
+      height: 100vh;
+      padding: 60px 20px;
+      text-align: center;
+    }
+      footer {
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 60px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 300px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 85%;
+      display: block;
+      align-items: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .text {
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+</style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destinations</title>
+        <link rel="icon" href=" ">
+    </head>
+    <body style="font-family: Arial, sans-serif;">
+        <header id="home">
+            <h1>RDNS Tours</h1>
+            <h2>Destinations</h2>
+            <p>Your Journey, Our Passion</p>
+          </header>
+          <nav>
+                <a href="homepage.html">Home</a>
+                <a href="destination.html">Destinations </a>
+                <a href="package.html">Packages </a>
+                <a href="#" onclick="showSection('contact')">Contact </a>            
+          </nav>
+          <div class="sec" id="destination" style="background-color: rgb(206, 250, 255);">
+            <div class="gallery">
+              <div class="image-container">
+                <img src="https://i.pinimg.com/736x/ac/4c/02/ac4c0277f904830937c3047f45e6d80a.jpg" alt="Place 1">
+                <div class="overlay">
+                  <div class="text"><a href="booking.html?place=Goa" style="color: #fff;">Goa</a><br><p style="font-size: small;">Explore everywhwre you want.</p></div>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="https://i.pinimg.com/736x/94/89/56/9489563afebd7bf38cb0729002a3b3ce.jpg" alt="Place 1">
+                <div class="overlay">
+                  <div class="text"><a href="booking.html?place=Thailand" style="color: #fff;">Thailand</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="https://i.pinimg.com/474x/6f/e4/02/6fe4021c70f2659f93a5805477ed152a.jpg" alt="Place 1">
+                <div class="overlay">
+                  <div class="text"><a href="booking.html?place=Japan" style="color: #fff;">Japan</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="https://i.pinimg.com/474x/31/92/8d/31928d1c435c3581ec281da71c46a7de.jpg" alt="Place 1">
+                <div class="overlay">
+                  <div class="text"><a href="booking.html?place=South Korea" style="color: #fff;">South Korea</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+                </div>
+              </div>
+          </div>
+          <div class="gallery">
+            <div class="image-container">
+              <img src="https://i.pinimg.com/474x/cf/e9/87/cfe987696198429b526768429f0e05d4.jpg" alt="Place 1">
+              <div class="overlay">
+                <div class="text"><a href="booking.html?place=Dubai" style="color: #fff;">Dubai</a>><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+              </div>
+            </div>
+          <div class="image-container">
+            <img src="https://i.pinimg.com/474x/98/51/0a/98510a0c6013f5913fac4b6d6c3aac12.jpg" alt="Place 1">
+            <div class="overlay">
+              <div class="text"><a href="booking.html?place=France" style="color: #fff;">France</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="https://i.pinimg.com/736x/49/c2/27/49c227ebeedc3c5704e367768110d279.jpg" alt="Place 1">
+            <div class="overlay">
+              <div class="text"><a href="booking.html?place=Hawaii" style="color: #fff;">Hawaii</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="https://i.pinimg.com/736x/88/d6/1f/88d61fcdc16a59c63940951af0ecfd2c.jpg" alt="Place 1">
+            <div class="overlay">
+              <div class="text"><a href="booking.html?place=Columbia" style="color: #fff;">Columbia</a><br><p style="font-size: small;">Explore everywhere you want.</p></div>
+            </div>
+          </div>
+        
+        </div>
+          </div>
+          <div class="section" id="contact" style="background-color: #fff3e0;">
+            <h2>Contact Us</h2>
+            <p>Samuel R<br>   <a href="mailto:24104092@nec.edu.in">24104092@nec.edu.in</a> (+91 76038 37694)<br><br>Dhariq J Anvar <br>   <a href="mailto:24104094@nec.edu.in">24104094@nec.edu.in</a>(+91 97101 27752)<br><br>Rahesh L<br>   <a href="mailto:24104115@nec.edu.in">24104115@nec.edu.in</a> (+91 76958 69150)<br><br>Nickson D kumar<br>    <a href="mailto:24104119@nec.edu.in">24104119@nec.edu.in</a>(+91 93452 88967)</p>
+            <p>Reach out 24/7 for support.</p>
+          </div>
+          <footer>
+            &copy; 2025 RDNS Tours. All rights reserved.
+          </footer>
+    </body>
+    <script>
+       function showSection(sectionId) {
+        const allSections = document.querySelectorAll(".section");
+        allSections.forEach((sec) => (sec.style.display = "none"));
+
+        const target = document.getElementById(sectionId);
+        if (target) {
+          target.style.display = "block";
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    </script>
+    </html>
